@@ -48,6 +48,14 @@ In this project we will find the Absenteeism of employees in the company using s
 ## Data Preprocessing.
 
 Reason for Absence is a categorical variable. So we should get dummies for these categorical Variable. 
+
 reason_columns = pd.get_dummies(df['Reason for Absence']) will get the work done for us.
 
-To avoid multicollinearity we will drop first column of 'reason_columns'
+To avoid multicollinearity we will drop first column of 'reason_columns'.
+
+Creating dummy variable of 28 categories and use them as it is is not very practicle. So we will group these 28 categories into 4 differebt categories .
+
+* Reason_type_1 = resons 1-14
+* Reason_type_2 = resons 15-17
+* Reason_type_3 = resons 18-21
+* Reason_type_4 = resons 22-28
