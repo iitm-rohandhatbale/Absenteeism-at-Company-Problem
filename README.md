@@ -53,9 +53,43 @@ reason_columns = pd.get_dummies(df['Reason for Absence']) will get the work done
 
 To avoid multicollinearity we will drop first column of 'reason_columns'.
 
-Creating dummy variable of 28 categories and use them as it is is not very practicle. So we will group these 28 categories into 4 differebt categories .
+Creating dummy variable of 28 categories and use them as it is is not very practicle. So we will group these 28 categories into 4 different categories .
 
 * Reason_type_1 = resons 1-14
 * Reason_type_2 = resons 15-17
 * Reason_type_3 = resons 18-21
 * Reason_type_4 = resons 22-28
+
+### Analysis of Date Column
+
+*Extract 'month' and 'day of the week' from Date value as a separate variable
+
+### Analysis of the Education Column
+
+Education is a categorical variable 
+
+* 1:High School
+* 2:Graduate
+* 3:Post Graduate
+* 4:Phd
+
+### Analysis of 'Absenteeism Time in Hours' Column
+
+Absenteeism time of an employee ranges from 0 hrs to 120 hrs in the given data with mean and also median of 3 hrs. So, we will convert this quantitative variable to ordinal variable.
+
+All the values which are above median will be noted as 1 and below it will be noted as 0 , and this notetion will be saved in 'Excessive Absenteeism' column
+
+This 'Excessive Absenteeism' will be our target or dependent variable.
+
+## Standerdizing the Data:
+
+*standerdizing is an important part of data preprocessing. Standerdizing converts data set into Standerd Normal distribution in wich all the variable have mean = 0 and Variance = 1.
+
+* Dummy variables are excluded from the Standerdization because of some obevious reasons.
+
+## Splitting the dataset into Train Test 
+
+
+## Machine Learning Part
+
+After the data is preprocessed we will 
