@@ -89,7 +89,26 @@ This 'Excessive Absenteeism' will be our target or dependent variable.
 
 ## Splitting the dataset into Train Test 
 
+we will split the dataset into train and test dataset 80 and 20 percent respectively.
 
 ## Machine Learning Part
 
-After the data is preprocessed we will 
+### Training The Model
+
+After the data is preprocessed we will use Logistic Regression method.
+
+After fitting model with train dataset we will analyse the model.
+
+* First we will create a dataframe consisting variable name and their respective coefficient.
+* Add a column in the above dataframe consisting odds ratio of the coefficient and arrange them in descending order
+* A Featue is not Particularly important :
+    -if its coefficient is around 0
+    -if the odds ratio is around 1
+
+we will Remove those variables which are not particularly important and will fit the model one more time. 
+
+The score obtain after training will be the final Training score
+
+### Testing The Model
+
+Test the model on test data and get final accuracy.
